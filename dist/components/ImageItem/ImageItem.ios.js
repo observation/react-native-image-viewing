@@ -14,8 +14,8 @@ import { ImageLoading } from "./ImageLoading";
 const SWIPE_CLOSE_OFFSET = 75;
 const SWIPE_CLOSE_VELOCITY = 1.55;
 const SCREEN = Dimensions.get("screen");
-const SCREEN_WIDTH = SCREEN.width;
-const SCREEN_HEIGHT = SCREEN.height;
+const SCREEN_WIDTH = SCREEN.width < SCREEN.height ? SCREEN.width : SCREEN.height;
+const SCREEN_HEIGHT = SCREEN.width > SCREEN.height ? SCREEN.width : SCREEN.height;
 const ImageItem = ({ imageSrc, onZoom, onRequestClose, onLongPress, delayLongPress, swipeToCloseEnabled = true, doubleTapToZoomEnabled = true, }) => {
     const scrollViewRef = useRef(null);
     const [loaded, setLoaded] = useState(false);
