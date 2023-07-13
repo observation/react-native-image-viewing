@@ -5,6 +5,7 @@ The repository is forked to create a slightly changed version to avoid a bug. Th
 To build the library and apply our patch run:
 ```
 $ yarn
+$ yarn build
 $ git apply patches/react-native-image-viewing+0.2.2.patch
 ```
 
