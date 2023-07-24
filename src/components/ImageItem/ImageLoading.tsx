@@ -11,8 +11,8 @@ import React from "react";
 import { ActivityIndicator, Dimensions, StyleSheet, View } from "react-native";
 
 const SCREEN = Dimensions.get("screen");
-const SCREEN_WIDTH = SCREEN.width;
-const SCREEN_HEIGHT = SCREEN.height;
+const SCREEN_WIDTH = SCREEN.width < SCREEN.height ? SCREEN.width : SCREEN.height;
+const SCREEN_HEIGHT = SCREEN.width > SCREEN.height ? SCREEN.width : SCREEN.height;
 
 export const ImageLoading = () => (
   <View style={styles.loading}>

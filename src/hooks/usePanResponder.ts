@@ -25,8 +25,8 @@ import {
 } from "../utils";
 
 const SCREEN = Dimensions.get("window");
-const SCREEN_WIDTH = SCREEN.width;
-const SCREEN_HEIGHT = SCREEN.height;
+const SCREEN_WIDTH = SCREEN.width < SCREEN.height ? SCREEN.width : SCREEN.height;
+const SCREEN_HEIGHT = SCREEN.width > SCREEN.height ? SCREEN.width : SCREEN.height;
 const MIN_DIMENSION = Math.min(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 const SCALE_MAX = 2;
