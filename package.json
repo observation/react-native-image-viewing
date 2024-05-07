@@ -24,7 +24,7 @@
     "react-native": ">=0.61.3"
   },
   "files": [
-    "dist",
+    "src",
     "readme.md",
     "package.json"
   ],
